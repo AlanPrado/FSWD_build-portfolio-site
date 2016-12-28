@@ -1,0 +1,35 @@
+{
+  "name": "build-portfolio-site",
+  "version": "1.0.0",
+  "description": "Build a Portfolio Site",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "npm install && gulp",
+    "release": "npm install && gulp dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlanPrado/build-portfolio-site.git"
+  },
+  "author": "Alan Prado",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlanPrado/build-portfolio-site/issues"
+  },
+  "homepage": "https://alanprado.github.io/build-portfolio-site",
+  "devDependencies": {
+    "browser-sync": "^2.17.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-image-resize": "^0.11.0",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-rm": "^1.0.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.1.1",
+    "gulp-watch": "^4.3.10",
+    "imagemin-pngquant": "^5.0.0",
+    "pump": "^1.0.1"
+  }
+}

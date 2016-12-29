@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Build a magic portifolio</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./css/main.css">
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -24,40 +23,59 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main-600w.css" media="screen and (min-width: 600px)">
+    <link rel="stylesheet" href="./css/main-780w.css" media="screen and (min-width: 780px)">
   </head>
   <body>
   <div class="container">
     <div class="header row">
-    	<div class="header__logo col-6">
+    	<div class="header__logo col-sm-6">
         <img src="./img/portifolio_logo.svg" onerror="this.onerror=null; this.src='portifolio_logo.png'">
     	</div>
-    	<div class="header__slug-container col-6">
+    	<div class="header__slug-container col-sm-6">
     		<h1 class="header__slug-container__name">Alan Prado</h1>
     		<h4 class="header__slug-container__header__slug">Mage Apprentice</h4>
     	</div>
       <div class="separator row"></div>
     </div>
-    <div class="banner row col-12">
-      <img src="/img/green.jpg" alt="Green Theme">
+    <div class="banner row col-sm-12">
+      <figure>
+        <picture>
+          <img src="./img/green-1200w.png" alt="Green Theme">
+        </picture>
+      </figure>
     </div>
     <div class="grid row">
-      <div class="title col-12">
+      <div class="title col-sm-12">
         <h2>Spell Book</h2>
       </div>
-      <div class="col-4 col-sm-12 grid__item">
-        <img src="./img/flames.jpg" alt="Flame Spell">
+      <div class="col-md-4 col-sm-6 grid__item">
+        <figure>
+          <picture>
+            <img src="./img/spell_flames-450w.png" alt="Flame Spell">
+          </picture>
+        </figure>
         <a class="grid__item__link" href="https://www.google.com.br/?#q=flame%20spell" target="_blank">
           Learn more flames spells!
         </a>
       </div>
-      <div class="col-4 col-sm-12 grid__item">
-        <img src="./img/frosty.jpg" alt="Frost Storm Spell">
+      <div class="col-md-4 col-sm-6 grid__item">
+        <figure>
+          <picture>
+            <img src="./img/spell_frosty-450w.png" alt="Frost Storm Spell">
+          </picture>
+        </figure>
         <a class="grid__item__link" href="https://www.google.com.br/?#q=frost%20spell" target="_blank">
           Learn more frost spells!
         </a>
       </div>
-      <div class="col-4 col-sm-12 grid__item">
-        <img src="./img/gold.jpg" alt="Gold Spell">
+      <div class="col-md-4 col-sm-6 grid__item">
+        <figure>
+          <picture>
+            <img src="./img/spell_gold-450w.png" alt="Gold Spell">
+          </picture>
+        </figure>
         <a class="grid__item__link" href="https://www.google.com.br/?#q=gold%20spell" target="_blank">
           Learn more frost spells!
         </a>

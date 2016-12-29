@@ -83,20 +83,22 @@ gulp.task('copy-html', (cb) => copy({src: '**/*.html'}, cb));
 gulp.task('resize-images', ['clear-images'], (cb) => {
 	gulp.start(['copy-fixed-images']);
 	let taskList = [];
-	function resize(img, width) {
+	function resize(img, opt, crop) {
 		var options = {
-			 upscale : false,
+			 upscale : true,
 			 format: 'png',
 			 imageMagick: true
 		};
-		options.width = width;
+		if(opt.width) options.width = opt.width;
+		if(opt.height) options.height = opt.height;
+		if(crop) options.crop = true;
 		taskList.push(gulp.src(appDir + img));
 		taskList.push(imageResize(options));
-		taskList.push(rename(function (path) { path.basename += "-" + width + "w"; }));
+		taskList.push(rename(function (path) { path.basename += "-" + options.width + "w"; }));
 		taskList.push(gulp.dest(appDir + '/img/'));
 	}
-	resize('/img_src/green.jpg', 900);
-	resize('/img_src/spell*.jpg', 400);
+	resize('/img_src/green.jpg',  { width: 1200, height: 400 }, true);
+	resize('/img_src/spell*.jpg', { width: 450, height: 160 }, true);
 	pump(taskList, cb);
 });
 
@@ -106,7 +108,8 @@ gulp.task('copy-images-dist', (cb) => copy({src: 'img/**/*', dest: 'img', imagem
 gulp.task('copy-favicon', (cb) => copy({ src: ['*.png', '*.xml','*.ico','*.json'] }, cb));
 
 //use this task for debug
-gulp.task('default', ['copy-html', 'copy-images', 'copy-favicon', 'styles'], () => {
+gulp.task('default', ['resize-images', 'copy-html', 'copy-favicon', 'styles'], () => {
+	gulp.start('copy-images');
 	gulp.watch(appDir + 'sass/**/*.scss', ['styles']);
 	gulp.watch(appDir + '**/*.html', ['copy-html']);
 	gulp.watch(destDir + '**/*.html')

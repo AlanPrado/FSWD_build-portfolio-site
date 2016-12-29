@@ -1,0 +1,9 @@
+@media screen and (min-width: 780px) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      padding: 5px;
+      width: 100% * $i / 12;
+      clear: both;
+    }
+  }
+}

@@ -17,6 +17,11 @@ html, body {
   height: 100%;
 }
 
+figure {
+  min-width: 100%;
+  margin: 0;
+}
+
 img {
   max-width: 100%;
 }
@@ -35,28 +40,10 @@ img {
 }
 
 @for $i from 1 through 12 {
-  .col-#{$i} {
-    padding: 5px;
+  .col-sm-#{$i} {
     width: 100% * $i / 12;
-    clear: both;
-  }
-}
-
-@for $i from 1 through 12 {
-  .col-md-#{$i} {
     padding: 5px;
-    width: 100% * $i / 12;
     clear: both;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  @for $i from 1 through 12 {
-    .col-sm-#{$i} {
-      padding: 5px;
-      width: 100% * $i / 12;
-      clear: both;
-    }
   }
 }
 
@@ -64,13 +51,7 @@ img {
   border-top: 1px solid green;
 }
 
-.banner {
-  max-height: 440px;
-}
-
 .grid__item {
-  margin: 0 auto;
-
   img {
     min-height: 100%;
     margin: 0 auto;
@@ -87,18 +68,24 @@ img {
 }
 
 .title h2 {
-  font-size: 2em;
+  font-size: 1.25em;
+  margin: 0;
+}
+
+.header__logo img {
+  max-height: 3.25em;
 }
 
 .header__slug-container {
   text-align: right;
 
   .header__slug-container__name {
-    font-size: 4em;
+    font-size: 1.75em;
     padding: 0;
     margin: 0;
   }
   .header__slug-container__header__slug {
+    font-size: 0.75em;
     padding: 0;
     margin: 0;
   }

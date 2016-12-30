@@ -31,16 +31,17 @@
   <div class="container">
     <div class="header row">
     	<div class="header__logo col-sm-6">
-        <img src="./img/portifolio_logo.svg" onerror="this.onerror=null; this.src='portifolio_logo.png'">
+        <!--TODO: inline this image in css file in order to save a request -->
+        <img src="./img/portifolio_logo.svg" onerror="this.onerror=null; this.src='portifolio_logo.png'" alt="Portfolio Logo">
     	</div>
     	<div class="header__slug-container col-sm-6">
     		<h1 class="header__slug-container__name">Alan Prado</h1>
-    		<h4 class="header__slug-container__header__slug">Mage Apprentice</h4>
+    		<span class="header__slug-container__header__slug">Mage Apprentice</span>
     	</div>
       <div class="separator row"></div>
     </div>
-    <div class="banner row col-sm-12">
-      <figure>
+    <div class="banner row">
+      <figure class="col-sm-12">
         <picture>
           <img src="./img/green-1200w.png" alt="Green Theme">
         </picture>
@@ -57,7 +58,7 @@
           </picture>
         </figure>
         <a class="grid__item__link" href="https://www.google.com.br/?#q=flame%20spell" target="_blank">
-          Learn more flames spells!
+          Learn more flames about spells!
         </a>
       </div>
       <div class="col-md-4 col-sm-6 grid__item">
@@ -67,7 +68,7 @@
           </picture>
         </figure>
         <a class="grid__item__link" href="https://www.google.com.br/?#q=frost%20spell" target="_blank">
-          Learn more frost spells!
+          Learn more frost about spells!
         </a>
       </div>
       <div class="col-md-4 col-sm-6 grid__item">
@@ -77,7 +78,7 @@
           </picture>
         </figure>
         <a class="grid__item__link" href="https://www.google.com.br/?#q=gold%20spell" target="_blank">
-          Learn more frost spells!
+          Learn more frost about spells!
         </a>
       </div>
     </div>

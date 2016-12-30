@@ -13,9 +13,13 @@ const pngquant = require('imagemin-pngquant');
 const imageResize = require('gulp-image-resize');
 const rename = require("gulp-rename");
 const rm = require("gulp-rm");
+const htmlv = require('gulp-html-validator');
+const cssv = require('gulp-w3c-css');
 
 const destDir = './docs/';
 const appDir = './app/';
+const htmlReport = './report/html/';
+const cssReport = './report/css/';
 
 function styles(cb, dist) {
 	let tasks = [];
@@ -36,6 +40,7 @@ function styles(cb, dist) {
 
 	pump(tasks, cb);
 }
+
 gulp.task('styles', (cb) => styles(cb));
 gulp.task('styles-dist', (cb) => styles(cb, true));
 
@@ -75,6 +80,7 @@ function copy(options, cb) {
 function clearDir(path, cb) {
 	pump([gulp.src(path, { read: false }), rm()], cb);
 };
+
 gulp.task('clear-images', (cb) => clearDir(appDir + '/img/*', cb));
 gulp.task('clear-dist', (cb) => clearDir(destDir + '/**/*', cb));
 
@@ -102,6 +108,20 @@ gulp.task('resize-images', ['clear-images'], (cb) => {
 	pump(taskList, cb);
 });
 
+gulp.task('html-validator', (cb) => {
+	pump([gulp.src(appDir + '/*.html'),
+				htmlv(),
+	      gulp.dest(htmlReport)],
+				  cb);
+});
+
+gulp.task('css-validator', (cb) => {
+	pump([gulp.src(destDir + '/css/*.css'),
+				cssv(),
+	      gulp.dest(cssReport)],
+				  cb);
+});
+
 gulp.task('copy-images', (cb) => copy({src: 'img/**/*', dest: 'img'}, cb));
 gulp.task('copy-fixed-images', (cb) => copy({src: 'img_src/fixed/*', dest: appDir + 'img', basePath: true}, cb));
 gulp.task('copy-images-dist', (cb) => copy({src: 'img/**/*', dest: 'img', imagemin: true}, cb));
@@ -119,6 +139,13 @@ gulp.task('default', ['resize-images', 'copy-html', 'copy-favicon', 'styles'], (
 			 server: destDir
 		});
 });
+
+//validate files
+gulp.task('validate', (cb) => {
+	gulp.start('html-validator');
+	gulp.start('css-validator');
+});
+
 //use this task for build a realease
 gulp.task('dist', ['resize-images', 'clear-dist'], () => {
 	gulp.start(['copy-html', 'copy-images-dist', 'copy-html', 'copy-favicon', 'styles-dist']);

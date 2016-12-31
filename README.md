@@ -6,20 +6,22 @@ Build a magic portifolio demo site.
 
 - Clone the repo: `https://github.com/AlanPrado/build-portfolio-site`
 - Install node.js
+- Install [image magic](https://www.imagemagick.org/script/command-line-tools.php)
 - Run: `npm run start` for debug
 - Run: `npm run release` to build release
 
 Note that you should not change any .css files in order to change the style.
-Change s*.scss files and *.css files will be automatic generated with the modifications.
+Change *.scss files and *.css files will be automatic generated with the modifications.
 
 ### What's included
 
 Within the download you'll find the following directories and files.
 ```
+├ index.html     # home page
+├───img_src      # image source folder
+│   └───fixed    # image that doesn't need manipulation
+└───sass         # sass folder
 ```
-
-A brief description about each file:
-
 
 ## Copyright and license
 Code and documentation copyright 2016-2016 Code released under the [MIT License](https://github.com/AlanPrado/build-portfolio-site/master/LICENSE)

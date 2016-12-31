@@ -21,7 +21,7 @@ Within the download you'll find the following directories and files.
 ├───img_src      # image source folder
 │   └───fixed    # image that doesn't need manipulation
 └───sass         # sass folder
-└───docs         # project already build
+└───docs         # current version of the project built
 ```
 
 ## Copyright and license

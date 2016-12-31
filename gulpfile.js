@@ -106,6 +106,7 @@ gulp.task('resize-images', ['clear-images'], (cb) => {
 	resize('/img_src/green.jpg',  { width: 1200, height: 400 }, true);
 	resize('/img_src/spell*.jpg', { width: 450, height: 160 }, true);
 	pump(taskList, cb);
+	gulp.start('copy-images');
 });
 
 gulp.task('html-validator', (cb) => {
@@ -128,8 +129,7 @@ gulp.task('copy-images-dist', (cb) => copy({src: 'img/**/*', dest: 'img', imagem
 gulp.task('copy-favicon', (cb) => copy({ src: ['*.png', '*.xml','*.ico','*.json'] }, cb));
 
 //use this task for debug
-gulp.task('default', ['resize-images', 'copy-html', 'copy-favicon', 'styles'], () => {
-	gulp.start('copy-images');
+gulp.task('default', ['copy-html', 'copy-favicon', 'styles'], () => {
 	gulp.watch(appDir + 'sass/**/*.scss', ['styles']);
 	gulp.watch(appDir + '**/*.html', ['copy-html']);
 	gulp.watch(destDir + '**/*.html')
@@ -147,6 +147,6 @@ gulp.task('validate', (cb) => {
 });
 
 //use this task for build a realease
-gulp.task('dist', ['resize-images', 'clear-dist'], () => {
+gulp.task('dist', ['clear-dist'], () => {
 	gulp.start(['copy-html', 'copy-images-dist', 'copy-html', 'copy-favicon', 'styles-dist']);
 });

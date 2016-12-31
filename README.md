@@ -17,9 +17,11 @@ Change *.scss files and *.css files will be automatic generated with the modific
 Within the download you'll find the following directories and files.
 ```
 ├ index.html     # home page
+├───img          # images served folder
 ├───img_src      # image source folder
 │   └───fixed    # image that doesn't need manipulation
 └───sass         # sass folder
+└───docs         # project already build
 ```
 
 ## Copyright and license

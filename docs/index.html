@@ -28,60 +28,65 @@
     <link rel="stylesheet" href="./css/main-780w.css" media="screen and (min-width: 780px)">
   </head>
   <body>
-  <div class="container">
-    <div class="header row">
-    	<div class="header__logo col-sm-6">
-        <!--TODO: inline this image in css file in order to save a request -->
-        <img src="./img/portifolio_logo.svg" onerror="this.onerror=null; this.src='portifolio_logo.png'" alt="Portfolio Logo">
-    	</div>
-    	<div class="header__slug-container col-sm-6">
-    		<h1 class="header__slug-container__name">Alan Prado</h1>
-    		<span class="header__slug-container__header__slug">Mage Apprentice</span>
-    	</div>
+    <article class="container">
+
+      <header class="row">
+        <section id="logo" class="header__logo col-sm-6">
+          <!--TODO: Consider inline this image in css file in order to save a request -->
+          <img src="./img/portifolio_logo.svg" onerror="this.onerror=null; this.src='portifolio_logo.png'" alt="Portfolio Logo">
+        </section>
+        <section id="slug" class="slug col-sm-6">
+          <h1 class="slug__author">Alan Prado</h1>
+          <span class="slug__title">Mage Apprentice</span>
+        </section>
+      </header>
+
       <div class="separator row"></div>
-    </div>
-    <div class="banner row">
-      <figure class="col-sm-12">
-        <picture>
-          <img src="./img/green-1200w.png" alt="Green Theme">
-        </picture>
-      </figure>
-    </div>
-    <div class="grid row">
-      <div class="title col-sm-12">
-        <h2>Spell Book</h2>
-      </div>
-      <div class="col-md-4 col-sm-6 grid__item">
-        <figure>
+
+      <section id="banner" class="row">
+        <figure class="col-sm-12">
           <picture>
-            <img src="./img/spell_flames-450w.png" alt="Flame Spell">
+            <img src="./img/green-1200w.png" alt="Green Theme">
           </picture>
         </figure>
-        <a class="grid__item__link" href="https://www.google.com.br/?#q=flame%20spell" target="_blank">
-          Learn more flames about spells!
-        </a>
-      </div>
-      <div class="col-md-4 col-sm-6 grid__item">
-        <figure>
-          <picture>
-            <img src="./img/spell_frosty-450w.png" alt="Frost Storm Spell">
-          </picture>
-        </figure>
-        <a class="grid__item__link" href="https://www.google.com.br/?#q=frost%20spell" target="_blank">
-          Learn more frost about spells!
-        </a>
-      </div>
-      <div class="col-md-4 col-sm-6 grid__item">
-        <figure>
-          <picture>
-            <img src="./img/spell_gold-450w.png" alt="Gold Spell">
-          </picture>
-        </figure>
-        <a class="grid__item__link" href="https://www.google.com.br/?#q=gold%20spell" target="_blank">
-          Learn more frost about spells!
-        </a>
-      </div>
-    </div>
-  </div>
+      </section>
+
+      <section id="spell-books" class="grid row">
+        <header class="title col-sm-12">
+          <h2>Spell Book</h2>
+        </header>
+        <article class="col-md-4 col-sm-6 grid__item">
+          <figure>
+            <picture>
+              <img class="grid__item__img" src="./img/spell_flames-450w.png" alt="Flame Spell">
+            </picture>
+          </figure>
+          <a class="grid__item__link" href="https://www.google.com.br/?#q=flame%20spell" target="_blank">
+            Learn more flames about spells!
+          </a>
+        </article>
+        <article class="col-md-4 col-sm-6 grid__item">
+          <figure>
+            <picture>
+              <img class="grid__item__img" src="./img/spell_frosty-450w.png" alt="Frost Storm Spell">
+            </picture>
+          </figure>
+          <a class="grid__item__link" href="https://www.google.com.br/?#q=frost%20spell" target="_blank">
+            Learn more frost about spells!
+          </a>
+        </article>
+        <article class="col-md-4 col-sm-6 grid__item">
+          <figure>
+            <picture>
+              <img class="grid__item__img" src="./img/spell_gold-450w.png" alt="Gold Spell">
+            </picture>
+          </figure>
+          <a class="grid__item__link" href="https://www.google.com.br/?#q=gold%20spell" target="_blank">
+            Learn more frost about spells!
+          </a>
+        </article>
+      </section>
+
+    </article>
   </body>
 </html>

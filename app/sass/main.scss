@@ -1,17 +1,18 @@
+$green: #008000;
+$theme-color: #0c6d3d;
+
 * {
   box-sizing: border-box;
-}
-
-* {
+  color: $theme-color;
   font-family: 'Lato', sans-serif;
-  color: #0c6d3d;
 }
 
-html, body {
+html,
+body {
+  height: 100%;
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
 }
 
 figure {
@@ -23,49 +24,48 @@ img {
 }
 
 .container {
-    margin: 0 auto;
-    max-width: 1200px;
-    width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
 }
 
 .row {
-    width: 100%;
-    margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: .75em;
+  width: 100%;
 }
 
 @for $i from 1 through 12 {
   .col-sm-#{$i} {
-    width: 100% * $i / 12;
-    padding: 5px;
-    margin: 0;
     clear: both;
+    margin: 0;
+    padding: 5px;
+    width: 100% * $i / 12;
   }
 }
 
 .separator {
-  border-top: 1px solid green;
+  border-top: 1px solid $green;
 }
 
-.grid__item {
-  img {
-    min-height: 100%;
-    margin: 0 auto;
-    display: block;
-  }
+.grid__item__img {
+  display: block;
+  margin: 0 auto;
+  min-height: 100%;
 }
 
 .grid__item__link {
-  text-decoration: none;
   display: inline-block;
-  width: 100%;
-  text-align: center;
+  font-size: 1em;
   padding-top: 1em;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
 }
 
 .title h2 {
-  font-size: 1.25em;
+  font-size: 1.5em;
   margin: 0;
 }
 
@@ -73,17 +73,18 @@ img {
   max-height: 3.25em;
 }
 
-.header__slug-container {
-  text-align: right;
+.slug__author {
+  font-size: 1.75em;
+  margin: 0;
+  padding: 0;
+}
 
-  .header__slug-container__name {
-    font-size: 1.75em;
-    padding: 0;
-    margin: 0;
-  }
-  .header__slug-container__header__slug {
-    font-size: 0.75em;
-    padding: 0;
-    margin: 0;
-  }
+.slug__title {
+  font-size: .75em;
+  margin: 0;
+  padding: 0;
+}
+
+.slug {
+  text-align: right;
 }

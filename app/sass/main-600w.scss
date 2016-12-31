@@ -1,19 +1,23 @@
 @media screen and (min-width: 600px) {
+
   .title h2 {
-    font-size: 2em;
+    font-size: 3em;
   }
 
   .header__logo img {
     max-height: 6.5em;
   }
 
-  .header__slug-container {
-
-    .header__slug-container__name {
-      font-size: 4em;
-    }
-    .header__slug-container__header__slug {
-      font-size: 1.5em;
-    }
+  .slug__author {
+    font-size: 4em;
   }
+
+  .slug__title {
+    font-size: 1.5em;
+  }
+
+  .row {
+    margin-bottom: 1.5em;
+  }
+
 }

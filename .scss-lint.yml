@@ -1,0 +1,34 @@
+scss_files: "app/sass/*.scss"
+plugin_directories: ['.scss-linters']
+
+# List of gem names to load custom linters from (make sure they are already
+# installed)
+plugin_gems: []
+
+# Default severity of all linters.
+severity: warning
+
+linters:
+  Indentation:
+    enabled: true
+    allow_non_nested_indentation: false
+    character: space # or 'tab'
+    width: 2
+
+  TrailingSemicolon:
+    enabled: true
+
+  TrailingWhitespace:
+    enabled: true
+
+  TrailingZero:
+    enabled: false
+
+  NameFormat:
+    enabled: true
+    allow_leading_underscore: false
+    convention: hyphenated_lowercase
+
+  SelectorFormat:
+    enabled: true
+    convention: ^[a-z0-9][a-z0-9\-]+(__[a-z0-9\-]+){0,2}

@@ -42,3 +42,5 @@ The following resources were used to build this page.
 6. http://gallery.yopriceville.com/Abstract/Flames_Wallpaper#.WGL2CxsrLIU
 7. http://thesassway.com/intermediate/if-for-each-while
 8. http://www.favicon-generator.org/
+9. https://github.com/yaniswang/HTMLHint/wiki/Rules
+10. https://github.com/CSSLint/csslint

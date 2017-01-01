@@ -4,7 +4,7 @@ $theme-color: #0c6d3d;
 * {
   box-sizing: border-box;
   color: $theme-color;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 html,
@@ -13,6 +13,10 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+}
+
+p {
+  font-size: 1.2em;
 }
 
 figure {
@@ -32,7 +36,7 @@ img {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: .75em;
+  margin-bottom: 0.75em;
   width: 100%;
 }
 
@@ -49,16 +53,16 @@ img {
   border-top: 1px solid $green;
 }
 
-.grid__item__img {
+.grid-item-img {
   display: block;
   margin: 0 auto;
   min-height: 100%;
 }
 
-.grid__item__link {
+.grid-item-link {
   display: inline-block;
   font-size: 1em;
-  padding-top: 1em;
+  padding-top: 0.5em;
   text-align: center;
   text-decoration: none;
   width: 100%;
@@ -69,18 +73,18 @@ img {
   margin: 0;
 }
 
-.header__logo img {
+.header-logo img {
   max-height: 3.25em;
 }
 
-.slug__author {
+.slug-author {
   font-size: 1.75em;
   margin: 0;
   padding: 0;
 }
 
-.slug__title {
-  font-size: .75em;
+.slug-title {
+  font-size: 0.75em;
   margin: 0;
   padding: 0;
 }

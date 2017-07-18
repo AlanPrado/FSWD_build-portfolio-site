@@ -1,4 +1,4 @@
-#Project: Build a magic portifolio
+# Project: Build a magic portifolio
 
 Build a magic portifolio demo site.
 
